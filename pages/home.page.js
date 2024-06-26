@@ -66,7 +66,7 @@ export default function HomePage({ navigation }) {
             <View style={{ marginTop: 30 }}>
                 <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
                     <Text style={{ color: themeContext.primaryColor, fontSize: 23, fontWeight: 600 }}>Transaction</Text>
-                    <Text style={{ color: 'blue', fontWeight: 600 }}>See All</Text>
+                    <Text style={{ color: '#0067fe', fontWeight: 600 }}>See All</Text>
                 </View>
                 <View>
                     <FlatList
@@ -87,7 +87,7 @@ export default function HomePage({ navigation }) {
                                         </View>
                                     </View>
                                     <Text style={{ 
-                                        ...( item.balance.startsWith('$') ? { color: 'blue' } : { color: themeContext.primaryColor }),
+                                        ...( item.balance.startsWith('$') ? { color: '#0067fe' } : { color: themeContext.primaryColor }),
                                         fontWeight: 600
                                      }} >{item.balance}</Text>
                                 </View>
