@@ -6,22 +6,21 @@ export default function ThemeProvider({ children }){
 
     const [ themeContext, setThemeContext ] = useState({
         theme: "light",
-        primaryColor: "black",
+        primaryColor: "#171722",
         secondaryColor: "white",
         neutralColor: "grey",
         neutralBgColor: "#e8e8e8"
     })
     
-
       function toggleTheme(){
         setThemeContext( prev => { 
             return ({
                 ...prev, 
                 theme: prev.theme == "light"  ? "dark" : "light",
-                primaryColor: prev.theme == "light" ? "black" : 'white',
-                secondaryColor: prev.theme == "light" ? "white" : 'black',
-                neutralColor: prev.theme == "light" ? "grey" : '#d3d3d3',
-                neutralBgColor: prev.theme == "light" ? "#d3d3d3" : 'grey',
+                primaryColor: prev.theme == "light" ? 'white' : "#171722",
+                secondaryColor: prev.theme == "light" ? '#171722' : "white",
+                neutralColor: prev.theme == "light" ? "#e8e8e8" : 'grey',
+                neutralBgColor: prev.theme == "light" ? "#1f1f2d" : "#e8e8e8",
 
             })
           })  
