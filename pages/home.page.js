@@ -29,7 +29,7 @@ export default function HomePage({ navigation }) {
                     </View>
                     <View style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
                         <Text style={{ color: themeContext.neutralColor, fontWeight: 400 }} >Welcome Back</Text>
-                        <Text style={{ fontWeight: 600, fontSize: 18  }}>Kwabena Owusu-Darko</Text>
+                        <Text style={{ color: themeContext.primaryColor, fontWeight: 600, fontSize: 18  }}>Kwabena Owusu-Darko</Text>
                     </View>
                 </View>
                 <View>
@@ -37,6 +37,7 @@ export default function HomePage({ navigation }) {
                         <FontAwesomeIcon 
                             icon={faMagnifyingGlass}
                             size={13}
+                            color={themeContext.primaryColor}
                         />
                     </View>
                 </View>
@@ -64,7 +65,7 @@ export default function HomePage({ navigation }) {
             </View>
             <View style={{ marginTop: 30 }}>
                 <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-                    <Text style={{ fontSize: 23, fontWeight: 600 }}>Transaction</Text>
+                    <Text style={{ color: themeContext.primaryColor, fontSize: 23, fontWeight: 600 }}>Transaction</Text>
                     <Text style={{ color: 'blue', fontWeight: 600 }}>See All</Text>
                 </View>
                 <View>
@@ -75,10 +76,10 @@ export default function HomePage({ navigation }) {
 
                         renderItem={( { item } ) => {
                             return (
-                                <View style={{ display: 'flex', marginBottom: 15, flexDirection: 'row', justifyContent: 'space-between' }}>
+                                <View style={{ display: 'flex', marginBottom: 15, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View style={{ display: 'flex', gap: 20, flexDirection: 'row', alignItems: 'center' }}>
                                         <View style={{ backgroundColor: themeContext.neutralBgColor, borderRadius: 50, width: 40, aspectRatio: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <FontAwesomeIcon icon={item.icon} />
+                                            <FontAwesomeIcon icon={item.icon} color={ (item.title == "Spotify") ? themeContext.theme == 'light' ? "green" : "lightgreen" : (item.title == 'Grocery') ? "red" : themeContext.primaryColor } />
                                         </View>
                                         <View>
                                             <Text style={{ color: themeContext.primaryColor, fontSize: 19, fontWeight: 600}}>{item.title}</Text>
